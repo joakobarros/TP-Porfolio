@@ -16,4 +16,7 @@ body{
     color:rgb(255, 255, 255);
     font-family:'Times New Roman', Times, serif;
 }
-"https://www.tangol.com/blog/Fotos/Notas/como-ir-al-bosque-de-arrayanes-desde-bariloche_467_202011121122310.JFIF"
+
+a{
+    color: aliceblue;
+}
