@@ -177,7 +177,7 @@
     <input type="text" id="ej5_i1">
 
     <label for="ej5_i2">Cantidad de letras</label>
-    <input type="number" id="ej5_i2">
+    <input type="text" id="ej5_i2">
 
     <button onclick="func_ej5()">Contar</button>
 
@@ -186,8 +186,9 @@
         function func_ej5(){
             
             const palabra = document.getElementById('ej5_i1').value;
-            const cant = palabra.lenght;
-            document.getElementById("ej5_i2").value = cant;
+           
+    
+            document.getElementById("ej5_i2").value = palabra + " tiene " + palabra.lenght + " letras"
         }
     </script>
 
@@ -256,7 +257,6 @@
          } else {
            comparten = false 
          } 
-    
          document.getElementById("ej7_respuesta").value= multiplos
       }
 
