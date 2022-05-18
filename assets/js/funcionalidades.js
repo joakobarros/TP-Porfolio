@@ -46,7 +46,6 @@ let n3v = n3.value
       }else{
 
           xd = "número 3"
-
       }
   }
 
@@ -101,7 +100,6 @@ function func_ej4(cel,far){
 function func_ej5(palabra){
             
     const palabrav = palabra.value;
-   
 
     document.getElementById("ej5_i2").value = palabrav + " tiene " + palabrav.lenght + " letras"
 }
@@ -120,3 +118,105 @@ function func_ej6(num) {
         document.getElementById("ej6_i2").value = res;
     }
 }
+
+
+function func_ej7(){
+
+    let num1v= parseInt(document.getElementById('ej7_i1').value);
+    let num2v= parseInt(document.getElementById('ej7_i2').value)
+
+    let multiplos = ""
+    let comparten = true
+    let mult = 3
+    var mod1, mod2
+
+    while (mult <= num1v && mult <= num2v && comparten == true) {
+
+      mod1 = num1v % mult
+      mod2 = num2v % mult
+
+       if (mod1 === mod2){
+
+          multiplos = multiplos + mult + ", "
+          mult = mult + 3
+
+       } else {
+         comparten = false 
+       } 
+    }
+    document.getElementById("ej7_respuesta").value= multiplos
+
+ }
+
+
+
+ function func_ej8(num){
+
+    let numv= parseInt(num.value);
+
+    var primos = []
+     
+    for (let index = 0; index <= numv; index++) {
+
+     if (esPrimo(index)) {
+        
+        primos.push(index)} 
+    
+    }
+
+    alert (primos.toString())
+
+}
+
+function esPrimo(numero) {
+
+    for (var i = 2; i < numero; i++) {
+  
+      if (numero % i === 0) {
+        return false;
+      }
+  
+    }
+  
+    return numero !== 1;
+  }
+
+
+  function func_ej9() {
+        
+    let nombre= document.getElementById('ej9_i1').value;
+    let apellido= document.getElementById('ej9_i2').value;
+    let edad = document.getElementById('ej9_i3').value;
+    let ciudad = document.getElementById('ej9_i4').value;
+    
+    const frase = "Mi nombre es " + nombre + " " + apellido + ", tengo " + edad + " años. Nací en la ciudad de " + ciudad + ".";
+
+    document.getElementById("ej9_respuesta").value = frase
+}
+
+
+function func_ej10() {
+
+    let num1= parseInt(document.getElementById('ej10_i1').value);
+    let num2= parseInt(document.getElementById('ej10_i2').value);
+    let numeros = ""
+      
+      if (num1 > num2) {
+          
+          for (let index = num1 - 1; index > num2 ; index--) {
+              
+              numeros = numeros + index + ", ";
+          }
+          document.getElementById("ej10_respuesta").value = numeros
+      } 
+
+      if (num2 > num1){
+
+           for (let index = num1 + 1; num2 > index ; index++) {
+              
+              numeros = numeros + index + ", ";;
+          }
+          document.getElementById("ej10_respuesta").value = numeros
+      }
+
+  }
