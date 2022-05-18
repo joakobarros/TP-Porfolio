@@ -186,8 +186,7 @@
         function func_ej5(){
             
             const palabra = document.getElementById('ej5_i1').value;
-           
-    
+        
             document.getElementById("ej5_i2").value = palabra + " tiene " + palabra.lenght + " letras"
         }
     </script>
@@ -257,6 +256,7 @@
          } else {
            comparten = false 
          } 
+         
          document.getElementById("ej7_respuesta").value= multiplos
       }
 
@@ -265,6 +265,34 @@
 
 <h1>8) (?)</h1>
 
+<html>
+<h1>Ejercicio 8 </h1>
+
+<label for= "ej8_i1">numero</label>
+<input type="number" id="ej8_i1">
+
+<button onclick="func_ej8()">Calcular</button>
+
+<label for= "ej8_respuesta">NumerosPrimos</label>
+<input type="text" id="ej8_respuesta">
+
+<script>
+    function func_ej8(){
+        let primos = ""
+        let numero = parseFloat(document.getElementById("ej8_respuesta")).value;
+    
+    if(numero != 0 || numero != 1 || numero != 4){ 
+           
+        for(let i = 2; i < numero; i++){
+            if (numero % i !== 0){
+                primos = primos + i + ", ";
+            }
+            document.getElementById("ej8_rta").value= primos
+        }
+    } 
+    }
+</script>
+</html>
 
 <h1>9) escribir una frase con datos ingresados por el usuario</h1>
 
