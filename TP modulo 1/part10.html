@@ -41,6 +41,7 @@ var cursors;
 var score = 0;
 var gameOver = false;
 var scoreText;
+var keyR;
 
 var game = new Phaser.Game(config);
 
@@ -70,6 +71,7 @@ function create ()
     platforms.create(600, 400, 'ground');
     platforms.create(50, 250, 'ground');
     platforms.create(750, 220, 'ground');
+    platforms.create(50, 500, 'ground');
 
     // The player and its settings
     player = this.physics.add.sprite(100, 450, 'dude');
@@ -77,6 +79,9 @@ function create ()
     //  Player physics properties. Give the little guy a slight bounce.
     player.setBounce(0.2);
     player.setCollideWorldBounds(true);
+
+    //añadir input para reinicio
+    keyR = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
 
     //  Our player animations, turning, walking left and walking right.
     this.anims.create({
