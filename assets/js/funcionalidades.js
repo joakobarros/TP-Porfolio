@@ -78,10 +78,10 @@ function func_ej3(n1,n2){
 }
 
 
-function func_ej4(cel,far){
+function func_ej4(){
 
-    let celv = parseFloat(cel.value);
-    let farv = parseFloat(far.value);
+    let celv = parseFloat(document.getElementById('ej4_i1').value);;
+    let farv = parseFloat(document.getElementById('ej4_i2').value);;
 
     if (celv != 0 && farv == 0) {
         
@@ -97,11 +97,14 @@ function func_ej4(cel,far){
 }
 
 
-function func_ej5(palabra){
+function func_ej5(){
             
-    const palabrav = palabra.value;
+    let ej5_palabra = (document.getElementById('ej5_i1').value);
+    let ej5_result = parseFloat(document.getElementById('ej5_i2').value);  // nota: La función parseFloat() analiza un argumento (si es necesario, lo convierte en una cadena) y devuelve un número de coma flotante
 
-    document.getElementById("ej5_i2").value = palabrav + " tiene " + palabrav.lenght + " letras"
+
+    document.getElementById('ej5_i2').value= "La palabra " +ej5_palabra+ " tiene " +ej5_palabra.length+ " letras."; 
+
 }
 
 
